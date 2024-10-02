@@ -8,6 +8,8 @@ function buildMetadata(sample) {
     // Filter the metadata for the object with the desired sample number
     const matchID = obj => obj.id === sample;
 
+    // Filter method requires a function
+    // matchID is an arrow function defined above.
     let filterData = metadata.filter(matchID);
 
     // Use d3 to select the panel with id of `#sample-metadata`
@@ -18,7 +20,7 @@ function buildMetadata(sample) {
 
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
-    for (let i = 0; i < sample.length)
+    for 
 
   });
 }
@@ -28,19 +30,37 @@ function buildCharts(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
 
     // Get the samples field
-
+    let sample = data.samples;
 
     // Filter the samples for the object with the desired sample number
-
+    const sampleID = obj => obj.id === sample;
+    
+    let filterSample = samples.filter(sampleID);
 
     // Get the otu_ids, otu_labels, and sample_values
-
+    let otu_ids = sample.samples.otu_ids;
+    let otu_labels = sample.samples.otu_labels;
+    let sample_values = sample.samples.sample_values;
 
     // Build a Bubble Chart
+    let trace1 = {
+      x: otu_ids,
+      y: sample_values,
+      colors: otu_ids,
+      text: otu_labels
+    };
 
+    let data = [trace1];
 
+    let layout = {
+      title: "Test"
+    };
+  
+
+    Plotly.newPlot("plot", data, layout);
+  
     // Render the Bubble Chart
-
+    buildCharts(sample);
 
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
 
@@ -51,8 +71,8 @@ function buildCharts(sample) {
 
     // Render the Bar Chart
 
-  });
-}
+ 
+
 
 // Function to run on page load
 function init() {
