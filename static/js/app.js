@@ -6,11 +6,15 @@ function buildMetadata(sample) {
     let metadata = data.metadata;
 
     // Filter the metadata for the object with the desired sample number
-    const matchID = obj => obj.id === sample;
+    const matchID = obj => obj.id === +sample;
 
     // Filter method requires a function
     // matchID is an arrow function defined above.
     let filterData = metadata.filter(matchID);
+
+    // test
+    console.log(sample);
+    console.log(metadata.filter(matchID));
 
     // Use d3 to select the panel with id of `#sample-metadata`
     let panel = d3.select("#sample-metadata");
