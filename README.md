@@ -6,7 +6,7 @@ This challenge creates an interactive dashboard using `JavaScript` and `d3` and 
 
 ## Data
 
-The data consists a JSON file (samples.json). This file is located in the main directory in this repository (belly-button-challenge). However, the JSON is retrieved from a API or URL [here][("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").
+The data consists a JSON file (samples.json). This file is located in the main directory in this repository (belly-button-challenge). However, the JSON is retrieved from a API or URL: ("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").
 
 ## Methodology
 
