@@ -6,23 +6,21 @@ This challenge creates an interactive dashboard using `JavaScript` and `d3` and 
 
 ## Data
 
-The data consists a JSON file (samples.json). This file is located in the main directory in this repository (belly-button-challenge). However, the JSON is retrieved from a API or URL: ("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").
+The data consists a `JSON` file (samples.json). This file is located in the main directory in this repository (belly-button-challenge). However, the `JSON` is retrieved from a API or URL: ("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json"). The `JSON` object contains numerous fields, but most notably for this challenge are the `metadata` field, and the `samples` field. These fields contain the relavent information for this challenge.
 
 ## Methodology
 
-This challenge involves using MongoDM, Mongosh, and mostly Pymongo. These tools enable the import of the JSON file into MongoDB, and Python to parse the JSON file. Pymongo is used extensively to query and edit the data. Finally Pandas is also used to create DataFrames for ease of viewing the data.
+To create the interactive dashboard, first the `d3` and `Leaflet` libraries are imported. Then the `JSON` file is read using `d3.json` commands. Then `JavaScript` functionalities are used to filter the data. Next `Leaflet` is used to plot the data. Finally a dropdown menu is selected from the `index.html` file and populated using  the  `forEach` function.
 
 ## Results
 
-The results show a wide range of hygiene and rating values across the United Kingdom. Several DataFrames are created to present the data clearly and concisely.
+The results show a complicated mix of microbes across many different metadata fields. Further research may be required to see summary statistics or a distribution of specific microbes. However, at a glance this is a create visualization for looking at the top ten microbes in any given sample.
 
 ## Conclusion
 
-The establishment we added in Part 1 ('Penang Flavours') is relatively close to many restaurants with good hygiene. There may be some competition for them, and should try to keep hygiene standards high to stay competitive.
+The data was sucessfully represented in an interactive dashboard complete with a dropdown menu, a metadata panel, a bar chart, and a bubble chart. The data shows a wide range of results that could be further explored.
 
 ## References
-
-[](https://github.com/nickbartram/nosql-challenge#references)
 
 Class materials were used extensively for this assignment, as well as:
 
@@ -32,4 +30,4 @@ Class materials were used extensively for this assignment, as well as:
 
 ## Usage
 
-This challenge is comprised on two IPYNB files that are straight forward in usage. If there are any questions regarding Jupyter Notebooks please refer to the documentation: [https://docs.jupyter.org/en/latest/](https://docs.jupyter.org/en/latest/)
+The `index.html` file can be opened using your default browser. However at GitHub Pages page should have all the same functionality.

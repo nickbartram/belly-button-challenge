@@ -62,7 +62,7 @@ function buildCharts(sample) {
     let data1 = [trace1];
 
     let layout = {
-      title: "Test"
+      title: "Bacteria Cultures Per Sample"
     };
   
     // Render the Bubble Chart
@@ -83,7 +83,7 @@ function buildCharts(sample) {
     let data2 = [trace2];
 
     let layout2 = {
-      title: "Top 10 OTU"
+      title: "Top 10 Bacteria Cultures Found"
     };
 
 
