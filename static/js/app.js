@@ -62,7 +62,9 @@ function buildCharts(sample) {
     let data1 = [trace1];
 
     let layout = {
-      title: "Bacteria Cultures Per Sample"
+      title: "Bacteria Cultures Per Sample",
+      xaxis: {title: 'OTU ID'},
+      yaxis: {title: 'Number of Bacteria'}
     };
   
     // Render the Bubble Chart
@@ -77,18 +79,20 @@ function buildCharts(sample) {
       x: sample_values.slice(0, 10).reverse(),
       y: otu_ids.slice(0,10).map(otuID => `OTU ${otuID}`).reverse(),
       type: "bar",
-      orientation: "h"
-    }
+      orientation: "h",
+      text: otu_labels
+    };
 
     let data2 = [trace2];
 
     let layout2 = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      xaxis: {title: "Number of Bacteria"}
     };
 
 
     // Render the Bar Chart
-    Plotly.newPlot("bar", data2, trace2);
+    Plotly.newPlot("bar", data2, layout2);
   });
 }
 
