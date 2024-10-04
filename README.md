@@ -30,4 +30,4 @@ Class materials were used extensively for this assignment, as well as:
 
 ## Usage
 
-The `index.html` file can be opened using your default browser. However at GitHub Pages page should have all the same functionality.
+The `index.html` file can be opened using your default browser. This Github repository is published on Github pages: [https://nickbartram.github.io/belly-button-challenge/]()
