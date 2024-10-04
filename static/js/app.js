@@ -12,10 +12,6 @@ function buildMetadata(sample) {
     // matchID is an arrow function defined above.
     let filterData = metadata.filter(matchID);
 
-    // test
-    console.log(sample);
-    console.log(metadata.filter(matchID));
-
     // Use d3 to select the panel with id of `#sample-metadata`
     let panel = d3.select("#sample-metadata");
 
